@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 describe("First Test", function(){
 	it.skip("Visit",function(){
-		cy.visit('http://0.0.0.0:8080')
+		cy.visit('http://127.0.0.1:8080')
 		cy.get('.item').first().click()
 	})
 	
@@ -15,7 +15,7 @@ describe("First Test", function(){
 			$url.click()
 		// 	// expect($url).to.have.string(lang)
 			cy.location('pathname').should('contain',lang)
-			
+
 		})
 		
 	})
