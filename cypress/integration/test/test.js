@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 describe("First Test", function(){
-	it.skip("Visit",function(){
+	it("Visit",function(){
 		cy.visit('http://127.0.0.1:8080')
 		cy.get('.item').first().click()
 	})
 	
 	it("Visiting English",function(){
-		cy.visit('http://0.0.0.0:8080')
+		cy.visit('http://127.0.0.1:8080')
 		cy.get('.item').last().find('.subtitle').then(($url)=>{
 			let lang = $url.text()
 			lang = lang.replace("Language · ", "")

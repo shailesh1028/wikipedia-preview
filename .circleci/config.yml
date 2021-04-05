@@ -69,6 +69,7 @@ workflows:
           executor: cypress/browsers-chrome73-ff68
           requires:
             - cypress/install
+            - build
           # start: npm run dev
           # wait-on: 'http://localhost:8080'
           group: chrome
