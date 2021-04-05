@@ -15,6 +15,7 @@ describe("First Test", function(){
 			$url.click()
 		// 	// expect($url).to.have.string(lang)
 			cy.location('pathname').should('contain',lang)
+			
 		})
 		
 	})
