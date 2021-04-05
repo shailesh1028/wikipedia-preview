@@ -64,14 +64,11 @@ workflows:
     jobs:
       - build
       - cypress/install
-      - cypress/run:          
-          name: Chrome
-          executor: cypress/browsers-chrome73-ff68
+      - cypress/run:
           requires:
             - cypress/install
           # start: npm run dev
           wait-on: 'http://127.0.0.1:8080'
-          group: chrome
           browser: chrome
 
 
