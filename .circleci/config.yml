@@ -68,8 +68,23 @@ workflows:
           requires:
             - cypress/install
           # start: npm run dev
-          wait-on: 'http://127.0.0.1:8080'
+          # wait-on: 'http://127.0.0.1:8080'
+          # group: chrome
           browser: chrome
+
+
+# workflows:
+#   version: 2
+#   build:
+#     jobs:
+#       - cypress/install
+#       - cypress/run:
+#           requires:
+#             - cypress/install
+#             - run: npx cypress info
+#             - run: npm run dev
+#           browser: chrome
+
 
 
       
