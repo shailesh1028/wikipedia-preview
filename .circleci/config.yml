@@ -63,3 +63,12 @@ workflows:
           wait-on: http://localhost:8080
           group: chrome
           browser: chrome
+      - cypress/run:
+          executor: cypress/browsers-chrome73-ff68
+          name: Firefox
+          requires:
+            - cypress/install
+          start: npm install && npm run dev
+          wait-on: http://localhost:8080
+          group: firefox-critical-path
+          browser: firefox
