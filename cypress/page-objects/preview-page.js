@@ -83,6 +83,13 @@ export class Preview {
 
 	}
 
+	// Custom Command to check the existence of Mobile Preview
+	checkMobilePreview() {
+
+		this.getMobPreview().should( 'be.visible' )
+			.and( 'have.class', 'mobile' )
+	}
+
 	// Custom Command to check the Preview in Standard Mode
 	checkPreviewStandard() {
 
